@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+<h1>DB List</h1>
+
+{{ dump(db_list) }}
+
+<table border="1">
+    <tr><th>DataBase</th></tr>
+    {% for db in db_list %}
+        <tr>
+            <td>{{ db.dbName }}</td>
+        </tr>
+    {% endfor %}
+</table>
+<br>
+<br>
+<a href="/new">Add New DB</a>
